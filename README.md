@@ -11,7 +11,7 @@ Tested with clang-6.0 & llvm-6.0 on Ubuntu 18.04.
 ## Usage
 ```
 # 0. build pass
-git clone
+git clone https://github.com/Learner0x5a/clang-cfi-jump-table-gerneration.git
 cd pass
 mkdir build
 cd build
