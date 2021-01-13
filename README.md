@@ -22,11 +22,11 @@ make
 python3 -m pip install wllvm
 
 # 2. build target package, e.g. coreutils-7.6
-#     get patches for building old version coreutils on newer glibc machines
+# 2.1 get patches for building old version coreutils on newer glibc machines
 cd ~
 git clone https://github.com/Learner0x5a/coreutils-patches.git
 
-#    build
+# 2.2 build
 wget https://mirrors.aliyun.com/gnu/coreutils/coreutils-7.6.tar.gz
 tar xvf coreutils-7.6.tar.gz
 mv coreutils-7.6 coreutils-7.6-O3
@@ -37,7 +37,7 @@ export LLVM_BITCODE_GENERATION_FLAGS="-B /root/deepbindiff-eval/clang-cfi/gold -
 ./configure CFLAGS="-g -O3"
 make -j12
 
-#    extract & disassemble target binary
+# 2.3 extract & disassemble target binary
 cd src
 extarct-bc ./cp
 llvm-dis-6.0 cp.bc
