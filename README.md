@@ -6,6 +6,8 @@ Implement an LLVM pass to record the src:line of each instruction in IR.
 
 Implement a python script to parse the after-opt IR and generate a jump table for each function type.
 
+The python script additionally generate jump tables for indirect call sites.
+
 Tested with clang-6.0 & llvm-6.0 on Ubuntu 18.04.
 
 ## Usage
