@@ -35,6 +35,7 @@ mv coreutils-7.6 coreutils-7.6-O3
 cd coreutils-7.6-O3
 patch -p1 < ~/patches_coreutils/patch-7.2-8.3
 export LLVM_COMPILER=clang
+# modify -B <dir> if necessary
 export LLVM_BITCODE_GENERATION_FLAGS="-B clang-cfi-jump-table-generation/gold -flto -fsanitize=cfi-icall"
 ./configure CFLAGS="-g -O3"
 make -j12
