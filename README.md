@@ -46,9 +46,9 @@ extarct-bc ./cp
 llvm-dis-6.0 cp.bc
 
 # 3. run analysis 
-opt-6.0 -load clang-cfi/pass/build/print-insn-dbg/libprint-insn-dbg.so -printINSdbg ./cp.ll > cp.ll.new
+opt-6.0 -load clang-cfi-jump-table-generation/pass/build/print-insn-dbg/libprint-insn-dbg.so -printINSdbg ./cp.ll > cp.ll.new
 # python3 argv[0] path/to/target.ll path/to/target.ll.new <package-name>
-python3 clang-cfi/parse_ir.py ./cp.ll ./cp.ll.new coreutils
+python3 clang-cfi-jump-table-generation/parse_ir.py ./cp.ll ./cp.ll.new coreutils
 
 
 ```
