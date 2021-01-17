@@ -101,7 +101,7 @@ def parse_ir():
             # print('[debug] len(line) in target.ll:',len(line))
             line = removeDebugMetadata(line)
             # 记录函数类型，形成typeid2targets字典
-            if line.startswith('define ') and ('!type ' in line): # 先不考虑外部函数，即以delcare开头的行
+            if line.startswith('define ') and ('!type ' in line) and (not 'available_externally' in line): # 先不考虑外部函数，即以delcare开头/available_externally的行
                 tokens = line.split()
                 # print('[debug]',tokens)
                 for idx in range(len(tokens)):
