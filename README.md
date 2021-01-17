@@ -53,4 +53,11 @@ python3 clang-cfi-jump-table-generation/parse_ir.py ./cp.ll ./cp.ll.new coreutil
 
 ```
 
+## External function in llvm IR:
+
+1. declare
+
+2. with attr available_externally
+
+
 
